@@ -1,0 +1,39 @@
+{
+    "name": "subzerobo/pipedrive_test",
+    "description": " PipeDrive RESTful Test",
+    "keywords": ["microframework", "rest", "router", "psr7"],
+    "homepage": "https://github.com/subzerobo/pipedrive_test",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali Kaviani Hamedani",
+            "email": "ali.kaviani@gmail.com",
+            "homepage": "https://www.linkedin.com/in/a-kaviani-hamedani/"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "slim/slim": "^3.1",
+        "slim/php-view": "^2.0",
+        "monolog/monolog": "^1.17",
+        "illuminate/database": "^5.7",
+        "respect/validation": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.8 < 6.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "process-timeout" : 0
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit"
+    }
+
+}

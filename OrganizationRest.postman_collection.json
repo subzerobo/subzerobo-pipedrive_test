@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "ea19206e-eabc-4809-a1d2-8c5dcf719f6f",
+		"name": "OrganizationRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Organization",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"org_name\": \"Paradise Island\",\n  \"daughters\": [\n    {\n      \"org_name\": \"Banana tree\",\n      \"daughters\": [\n      \t{\n          \"org_name\": \"Fucker\"\n        },\n        {\n          \"org_name\": \"Yellow Banana\"\n        },\n        {\n          \"org_name\": \"Brown Banana\"\n        },\n        {\n          \"org_name\": \"Black Banana\"\n        }\n      ]\n    },\n    {\n      \"org_name\": \"Big banana tree\",\n      \"daughters\": [\n        {\n          \"org_name\": \"Yellow Banana\"\n        },\n        {\n          \"org_name\": \"Brown Banana\"\n        },\n        {\n          \"org_name\": \"Green Banana\"\n        },\n        {\n          \"org_name\": \"Black Banana\",\n          \"daughters\": [\n            {\n              \"org_name\": \"Phoneutria Spider\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/organizations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organizations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Organization",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"org_name\": \"Paradise Island\",\n  \"daughters\": [\n    {\n      \"org_name\": \"Banana tree\",\n      \"daughters\": [\n        {\n          \"org_name\": \"Yellow Banana\"\n        },\n        {\n          \"org_name\": \"Brown Banana\"\n        },\n        {\n          \"org_name\": \"Black Banana\"\n        }\n      ]\n    },\n    {\n      \"org_name\": \"Big banana tree\",\n      \"daughters\": [\n        {\n          \"org_name\": \"Yellow Banana\"\n        },\n        {\n          \"org_name\": \"Brown Banana\"\n        },\n        {\n          \"org_name\": \"Green Banana\"\n        },\n        {\n          \"org_name\": \"Black Banana\",\n          \"daughters\": [\n            {\n              \"org_name\": \"Phoneutria Spider\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/organizations/Black Banana",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organizations",
+						"Black Banana"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Organization With Pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"org_name\": \"Paradise Island\",\n  \"daughters\": [\n    {\n      \"org_name\": \"Banana tree\",\n      \"daughters\": [\n        {\n          \"org_name\": \"Yellow Banana\"\n        },\n        {\n          \"org_name\": \"Brown Banana\"\n        },\n        {\n          \"org_name\": \"Black Banana\"\n        }\n      ]\n    },\n    {\n      \"org_name\": \"Big banana tree\",\n      \"daughters\": [\n        {\n          \"org_name\": \"Yellow Banana\"\n        },\n        {\n          \"org_name\": \"Brown Banana\"\n        },\n        {\n          \"org_name\": \"Green Banana\"\n        },\n        {\n          \"org_name\": \"Black Banana\",\n          \"daughters\": [\n            {\n              \"org_name\": \"Phoneutria Spider\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/organizations/Black Banana?limit=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organizations",
+						"Black Banana"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
